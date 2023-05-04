@@ -21,3 +21,8 @@ end
 10.times do
   dog = Dog.create(name: Faker::Creature::Dog.name, breed: Faker::Creature::Dog.breed, city_id: rand(1..10))
 end
+
+# Créer 10 promenades aléatoires
+10.times do
+  Strolls.create(dogsitter_id: rand(1..10), dog_id: rand(1..10))
+end
